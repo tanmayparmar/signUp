@@ -16,11 +16,12 @@ export class UserListComponent implements OnInit {
 
   constructor(private userDetailService: UserDetailService,
     private route: ActivatedRoute) {  }
-  ngOnInit() {  }
-  getSubscriber(searchParameters: string): void {
-    // this.users = [];
-    // this.userDetailService.getSubscribers(searchParameters).subscribe(users => {
-    //   this.users = users;
-    // });
+  ngOnInit() {
+    this.users = [];
+    this.userDetailService.getAllUsers().subscribe(users => {
+      this.users = users;
+    });
+   }
+  getAlUser(user: User): void {
   }
 }

@@ -14,13 +14,11 @@
         </thead>
         <tbody>
           <tr *ngFor="let user of users">
-            <td>{{user.sId}}</td>
-            <td>{{user.groupId}}</td>
-            <td>{{user.name}}</td>
+            <td>{{user.firstname}}</td>
             <td>{{user.lastname}}</td>
             <td>{{user.email}}</td>
-            <td>{{user.postalCode}}</td>
-            <td>{{user.status}}</td>
+            <td>{{user.comments}}</td>
+            <td>{{user.activity}}</td>
           </tr>
         </tbody>
       </table>

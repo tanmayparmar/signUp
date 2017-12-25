@@ -1,44 +1,46 @@
 <div class="container-fluid no-gutters bg-white">
   <div class="row">
-    <div class="col">
+    <div class="col-8">
       <div class="card border-0">
         <div class="card-body rounded-0 bg-white">
           <form class="form" [formGroup]="registerForm">
+            <h1>SignUp Form</h1>
             <div class="form-group">
               <label for="fname ">
                 <b>First Name</b>
               </label>
-              <input type="text" class="form-control w-25" id="firstName" autocomplete="off" formControlName="firstName">
+              <input type="text" class="form-control w-50" id="firstname" autocomplete="off" formControlName="firstname" placeholder="First Name">
             </div>
             <div class="form-group">
               <label for="lname ">
                 <b>Last Name</b>
               </label>
-              <input type="text" class="form-control w-25" id="lastName" autocomplete="off" formControlName="lastName">
+              <input type="text" class="form-control w-50" id="lastname" autocomplete="off" formControlName="lastname" placeholder="Last Name">
             </div>
             <div class="form-group">
               <label for="email">
                 <b>Email</b>
               </label>
-              <input type="email" class="form-control w-25" id="email" autocomplete="off" formControlName="email">
+              <input type="email" class="form-control w-50" id="email" autocomplete="off" formControlName="email" placeholder="Email">
             </div>
             <div class="form-group">
               <label for="activity">
                 <b>Activity</b>
               </label>
-              <input type="text" class="form-control w-25" id="activity" autocomplete="off" formControlName="activity">
+              <input type="text" class="form-control w-50" id="activity" autocomplete="off" formControlName="activity" placeholder="Activity">
             </div>
             <div class="form-group">
               <label for="comments">
                 <b>Comments</b>
               </label>
-              <input type="text" class="form-control w-25" id="comments" autocomplete="off" formControlName="comments">
+              <textarea class="form-control w-50" id="comments" autocomplete="off" formControlName="comments" placeholder="Comments"></textarea>
             </div>
           </form>
           <div>
-            <Button class="btn btn-primary">Submit</Button>
+            <Button class="btn btn-primary" (click)="btnSubmit()">Submit</Button>
           </div>
         </div>
       </div>
     </div>
+    <div class="col-4"></div>
   </div>
